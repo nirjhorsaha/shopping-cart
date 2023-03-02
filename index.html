@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2767c807ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-['Segoe_UI']">
+    <header>
+        <!-- nav bar -->
+        <div class="navbar bg-base-100 shadow-2xl lg:px-12 container mx-auto rounded-3xl">
+            <div class="flex-1">
+                <i class="fa-solid fa-bag-shopping fa-2xl"></i>
+                <a class="btn btn-ghost normal-case text-xl"> Shopping Cart</a>
+            </div>
+            <div class="flex-none">
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="badge badge-sm indicator-item">8</span>
+                        </div>
+                    </label>
+                    <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+                        <div class="card-body">
+                            <span class="font-bold text-lg">8 Items</span>
+                            <span class="text-info">Subtotal: $999</span>
+                            <div class="card-actions">
+                                <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://api.lorem.space/image/face?w=150&h=150" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container flex flex-col md:flex-row">
+            <div class="products-details m-8 w-[70%] grid md:grid-cols-3 gap-10">
+                <!-- product - shoe -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="" src="https://api.lorem.space/image/shoes?w=350&h=350" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-3xl" id="first-name">Shoe</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et inventore corrupti, ipsum
+                            accusamus voluptatum distinctio?</p>
+                        <p class="text-xl">Price: $<span id="first-price">250</span></p>
+                        <input type="text" placeholder="Type Quantity" id="first-quantity"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <!-- <p class="text-xl">Quantity: <span id="first-quantity">2</span></p> -->
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="first-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- product - watch -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="" src="https://api.lorem.space/image/watch?w=350&h=350" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-3xl" id="second-name">Watch</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et inventore corrupti, ipsum
+                            accusamus voluptatum distinctio?</p>
+                        <p class="text-xl">Price: $<span id="second-price">170</span></p>
+                        <!-- <p class="text-xl">Quantity: <span id="second-quantity">3</span></p> -->
+                        <input type="text" placeholder="Type Quantity" id="second-quantity"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="second-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- product - furniture -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure>
+                        <img class="" src="https://api.lorem.space/image/furniture?w=350&h=350" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-3xl" id="third-name">Furniture</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et inventore corrupti, ipsum
+                            accusamus voluptatum distinctio?</p>
+                        <p class="text-xl">Price: $<span id="third-price">1250</span></p>
+                        <!-- <p class="text-xl">Quantity: <span>1</span></p> -->
+                        <input type="text" placeholder="Type Quantity" id="third-quantity"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="third-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- burger -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure><img class="" src="https://api.lorem.space/image/burger?w=350&h=350" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-3xl" id="fourth-name">Burger</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et inventore corrupti, ipsum
+                            accusamus voluptatum distinctio?</p>
+                        <p class="text-xl">Price: $<span id="fourth-price">80</span></p>
+                        <!-- <p class="text-xl">Quantity: <span>2</span></p> -->
+                        <input type="text" placeholder="Type Quantity" id="fourth-quantity"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="fourth-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- pizza -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure><img class="" src="https://api.lorem.space/image/pizza?w=350&h=350" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-3xl" id="fifth-name">pizza</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et inventore corrupti, ipsum
+                            accusamus voluptatum distinctio?</p>
+                        <p class="text-xl">Price: $<span id="fifth-price">110</span></p>
+                        <!-- <p class="text-xl">Quantity: <span>1</span></p> -->
+                        <input type="text" placeholder="Type Quantity" id="fifth-quantity"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="fifth-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-details w-full md:w-[30%] h-1/3 m-8 mx-auto border-2 rounded-2xl">
+                <h1 class="text-3xl text-center font-bold underline text-purple-500">
+                    Total Products : <span id="total-product">0</span>
+                </h1>
+                <div class="overflow-x-auto mt-4">
+                    <table class="table w-full text-center">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-container">
+                            <!-- <tr>
+                                <th>1</th>
+                                <td>Cy Ganderton</td>
+                                <td>Quality Control Specialist</td>
+                                <td>Blue</td>
+                            </tr> -->
+
+                        </tbody>
+                        
+                    </table>
+                    <hr class="w-80 mx-auto">
+                    <table class="table w-full text-center">
+                        <tr class="font-bold">
+                            <th> </th>
+                            <td> </td>
+                            <td> </td>
+                            <td>Total :</td>
+                            <td><span id="total-price">0</span> tk</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- js -->
+    <script src="shopping.js"></script>
+</body>
+
+</html>
